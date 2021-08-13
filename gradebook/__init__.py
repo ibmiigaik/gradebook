@@ -18,8 +18,6 @@ def create_app(config="gradebook.config.Config"):
 
         init_template_globals(app)
 
-        if app.config.get("DEBUG"):
-            User.create_mock_users()
 
         from gradebook.auth import auth
 
